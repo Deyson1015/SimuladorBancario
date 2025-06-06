@@ -159,7 +159,7 @@ public class PanelCDT extends JPanel implements ActionListener
     public void actualizarSaldoCDT( String pSaldo , String interesCdt)
     {
         txtSaldoCdt.setText( pSaldo );
-        txtInteresCdt.setText( interesCdt );
+        txtInteresCdt.setText( interesCdt + "$" );
     }
 
     /**

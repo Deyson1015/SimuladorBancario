@@ -105,7 +105,7 @@ public class PanelAhorros extends JPanel implements ActionListener
         txtSaldoAhorros = new JTextField( 14 );
         txtSaldoAhorros.setEditable( false );
         
-        etiquetaInteres = new JLabel("Interes Generados: ");
+        etiquetaInteres = new JLabel("Interes Generado: ");
         txtInteresAhorros = new JTextField( 14 );
         txtInteresAhorros.setEditable( false );
 

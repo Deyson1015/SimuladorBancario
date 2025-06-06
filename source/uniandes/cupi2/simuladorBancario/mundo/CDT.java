@@ -63,6 +63,7 @@ public class CDT
     	 return  valorInvertido;
     }
 
+    
     /**
      * Inicia una inversión en un CDT .<br>
      * <b>post: </b> Se cambian los valores del CDT, con los valores recibidos. <br>
@@ -84,6 +85,7 @@ public class CDT
      */
     public double calcularValorPresente( int pMesActual )
     {
+    	
         int mesesTranscurridos = pMesActual - mesApertura;
         return ( double ) ( valorInvertido + ( mesesTranscurridos * interesMensual * valorInvertido ) );
     }
