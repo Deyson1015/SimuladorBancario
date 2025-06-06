@@ -57,6 +57,11 @@ public class CDT
     {
         return interesMensual;
     }
+    
+    public double darSaldoCdt()
+    {
+    	 return  valorInvertido;
+    }
 
     /**
      * Inicia una inversión en un CDT .<br>
