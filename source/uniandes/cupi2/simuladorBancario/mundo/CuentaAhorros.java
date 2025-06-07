@@ -10,6 +10,8 @@
  */
 package uniandes.cupi2.simuladorBancario.mundo;
 
+import java.util.ArrayList;
+
 /**
  * Clase que representa la cuenta de ahorro de un cliente.
  */
@@ -28,6 +30,9 @@ public class CuentaAhorros
      * Interés mensual que paga la cuenta de ahorro.
      */
     private double interesMensual;
+    
+    
+    private ArrayList<Double> saldosMensuales = new ArrayList<>();
 
     // -----------------------------------------------------------------
     // Métodos
@@ -69,6 +74,7 @@ public class CuentaAhorros
     public void consignarMonto( double pMonto )
     {
         saldo = saldo + pMonto;
+        registrarSaldo();
     }
 
     /**
@@ -79,6 +85,7 @@ public class CuentaAhorros
     public void retirarMonto( double pMonto )
     {
         saldo = saldo - pMonto;
+        registrarSaldo();
     }
 
     /**
@@ -88,5 +95,24 @@ public class CuentaAhorros
     public void actualizarSaldoPorPasoMes( )
     {
         saldo = saldo + ( saldo * interesMensual );
+        registrarSaldo();
+    }
+    
+    public double calcularPromedio(int mesInicio, int mesFin)
+    {
+        double suma = 0.0;
+        int cantidadMeses = 0;
+
+        for (int i = mesInicio - 1; i < mesFin && i < saldosMensuales.size(); i++) {
+            suma += saldosMensuales.get(i);
+            cantidadMeses++;
+        }
+
+        return cantidadMeses > 0 ? suma / cantidadMeses : 0.0;
+    }
+
+    
+    public void registrarSaldo() {
+        saldosMensuales.add(saldo); // Guarda el saldo actual al final de la lista
     }
 }

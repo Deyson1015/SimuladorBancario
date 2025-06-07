@@ -10,6 +10,7 @@
  */
 package uniandes.cupi2.simuladorBancario.mundo;
 
+
 /**
  * Clase que representa la cuenta corriente de un cliente.
  */
@@ -54,6 +55,7 @@ public class CuentaCorriente
     public void consignarMonto( double pMonto )
     {
         saldo = saldo + pMonto;
+       
     }
 
     /**
@@ -64,5 +66,7 @@ public class CuentaCorriente
     public void retirarMonto( double pMonto )
     {
         saldo = saldo - pMonto;
+       
     }
+
 }
