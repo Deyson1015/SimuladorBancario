@@ -198,6 +198,7 @@ public class SimuladorBancario
      
         // Agregamos la el metodo registarSaldo al metodo avanzarMes
         ahorros.registrarSaldo();
+        corriente.limpiarTransacciones(); 
         ahorros.limpiarTransacciones(); // agregamos el metodo para limpiar las transacciones al final de mes.
     }
 

@@ -28,7 +28,8 @@ public class CuentaCorriente
     private double saldo;
     
     
-    private ArrayList<String> transaccionesMensuales = new ArrayList<>();
+    private ArrayList<String> transaccionesMensuales = new ArrayList<>(); // objeto que alamcena las transacciones mensuales.
+
 
 
     // -----------------------------------------------------------------
@@ -91,9 +92,13 @@ public class CuentaCorriente
         
     }
     
+    /**
+     * Limpia la lista de transacciones del mes actual.
+     */
     public void limpiarTransacciones()
     {
-        transaccionesMensuales.clear();
+        transaccionesMensuales.clear(); // para eliminar todos elementos de la transacción actual antes de que pase al siguiente mes
+
     }
 
 

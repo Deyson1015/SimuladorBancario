@@ -39,7 +39,7 @@ public class CuentaAhorros
     /**
      * Lista que almacena las transacciones realizadas durante el mes actual.
      */
-    private ArrayList<String> transaccionesMensuales = new ArrayList<>(); // objeto que alamcena las transacciones mensuales
+    private ArrayList<String> transaccionesMensuales = new ArrayList<>(); // objeto que alamcena las transacciones mensuales.
 
     
     // -----------------------------------------------------------------
@@ -118,8 +118,8 @@ public class CuentaAhorros
         double suma = 0.0;
         int cantidadMeses = 0;
 
-        for (int i = mesInicio - 1; i < mesFin && i < saldosMensuales.size(); i++) {
-            suma += saldosMensuales.get(i);
+        for (int i = mesInicio - 1; i < mesFin && i < saldosMensuales.size(); i++) { // size saber la cantidad de elementos del ArrayList
+            suma += saldosMensuales.get(i); // Obtener el mes actual con el saldo y agregarlo a la variable suma.
             cantidadMeses++;
         }
 
@@ -136,11 +136,11 @@ public class CuentaAhorros
             return "No se han realizado transacciones este mes.";
         }
 
-        StringBuilder resumen = new StringBuilder();
+        StringBuilder resumen = new StringBuilder(); // Clase para construir cadenas de texto
         for (String transaccion : transaccionesMensuales) {
-            resumen.append(transaccion).append("\n");
+            resumen.append(transaccion).append("\n"); // Recorre las transacciones y las va añadiendo al resumen, separadas por saltos de linea
         }
-        return resumen.toString();
+        return resumen.toString(); // Convierte el objeto StringBuilder a una sola cadena de texto
     }
 
     /**
@@ -148,7 +148,7 @@ public class CuentaAhorros
      */
     public void limpiarTransacciones()
     {
-        transaccionesMensuales.clear(); // para eliminar todos elementos de la transacción actual antes de que pase al siguiente mes
+        transaccionesMensuales.clear(); // para eliminar todos elementos dee la transacción actual antes de que pase al siguiente mes
     }
 
     
@@ -159,4 +159,5 @@ public class CuentaAhorros
     public void registrarSaldo() {
         saldosMensuales.add(saldo); // Guarda el saldo actual al final de la lista
     }
+    
 }
