@@ -48,6 +48,7 @@ public class SimuladorBancario
      * CDT del cliente.
      */
     private CDT inversion;
+    
 
     // -----------------------------------------------------------------
     // Métodos
@@ -194,10 +195,10 @@ public class SimuladorBancario
     {
         mesActual += 1;
         ahorros.actualizarSaldoPorPasoMes( );
-        
-     // Registrar saldo en cada cuenta
+     
+        // Agregamos la el metodo registarSaldo al metodo avanzarMes
         ahorros.registrarSaldo();
-
+        ahorros.limpiarTransacciones(); // agregamos el metodo para limpiar las transacciones al final de mes.
     }
 
     /**
@@ -234,8 +235,11 @@ public class SimuladorBancario
      * Retorna el resultado de la extensión 2.
      * @return Respuesta 2.
      */
-    public String metodo2( )
+    public String metodo2()
     {
-        return "Respuesta 2";
+        String resumen = "Resumen de transacciones del mes " + mesActual + ":\n";
+        resumen += "\nCuenta de Ahorros:\n" + ahorros.resumenTransacciones();
+        return resumen;
     }
+
 }
