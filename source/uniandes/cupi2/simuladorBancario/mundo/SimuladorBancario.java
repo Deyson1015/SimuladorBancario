@@ -239,6 +239,7 @@ public class SimuladorBancario
     {
         String resumen = "Resumen de transacciones del mes " + mesActual + ":\n";
         resumen += "\nCuenta de Ahorros:\n" + ahorros.resumenTransacciones();
+        resumen += "\nCuenta Corriente:\n" + corriente.resumenTransacciones();
         return resumen;
     }
 
